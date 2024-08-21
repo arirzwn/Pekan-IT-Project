@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    font-family: "Poppins";
+}
+
+.img-background{
+    background-image: url("/src/assets/background2.jpg");
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.highlight-text{
+    /*background: url(//s2.svgbox.net/pen-brushes.svg?ic=brush-1&color=ffff43);*/
+    /*margin: -2px -6px;*/
+    /*padding:  2px  6px;*/
+
+    background: url(https://s2.svgbox.net/pen-brushes.svg?ic=brush-2&color=47a603);
+    margin: -2px -6px;
+    padding: 2px 6px;
+}
+
+.highlight-tulisan{
+    background: url(https://s2.svgbox.net/pen-brushes.svg?ic=brush-2&color=47a603);
+    margin: -2px -6px;
+    padding: 2px 6px;
+}
+
+.default-button-styles{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+ }
+
+.box{
+    @apply w-[298px] h-[307px]
+}
