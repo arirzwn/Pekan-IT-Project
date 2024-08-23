@@ -4,6 +4,7 @@
 
 * {
     font-family: "Poppins";
+    border: red 1px solid;
 }
 
 .img-background{
@@ -39,4 +40,8 @@
 
 .box{
     @apply w-[298px] h-[307px]
+}
+
+.kotaksatu {
+    @apply w-[100%]
 }
