@@ -3,6 +3,7 @@ import { Home } from "./pages/Home.jsx";
 // import "./App.css";
 import "./index.css";
 import News from "./pages/News.jsx";
+import Footer from "./layout/Footer/Footer.jsx";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Navbar />
       <Home />
       <News />
+      <Footer />
     </>
   );
 }
