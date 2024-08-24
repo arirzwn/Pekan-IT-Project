@@ -1,6 +1,6 @@
 import "/src/index.css";
 
-export function Banner() {
+export function Banner({ children }) {
   return (
     <>
       <div className="img-background  rounded-md  mt-5  text-center  text-5xl font-normal leading-snug">

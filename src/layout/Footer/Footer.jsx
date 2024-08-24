@@ -1,12 +1,19 @@
 import bgFooter from "/src/assets/bg-footer.png";
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
+import {
+  FaFacebookF,
+  FaLinkedinIn,
+  FaInstagram,
+  FaGithub,
+} from "react-icons/fa";
+
 import Button from "../../components/Button.jsx";
 
 export default function Footer() {
   return (
     <>
       <div>
-        <div className="flex h-[350px]">
+        <div className="flex  h-[350px]">
           <div className="relative w-1/2 overflow-hidden">
             <img
               src={bgFooter}
@@ -29,22 +36,48 @@ export default function Footer() {
               </div>
             </div>
           </div>
-          <div className="bg-[#DEF9C4] w-1/2 flex justify-center items-center gap-10 text-sm text-[#365E32] relative">
-            <div className="kiri border-r-2 border-[#365E32]  pr-10">
-              <h1 className="font-semibold text-xl">TENTANG SECONDLIFE</h1>
-              <ul>
-                <li>News and Article</li>
-                <li>Stories</li>
-                <li>Events</li>
-              </ul>
-            </div>
-            <div className="kanan">
-              <h1 className="font-semibold text-xl">NEWS AND EVENTS</h1>
-              <ul>
-                <li>News and Article</li>
-                <li>Stories</li>
-                <li>Events</li>
-              </ul>
+          <div className="container bg-[#DEF9C4] w-1/2 flex justify-center items-center gap-10 text-sm text-[#365E32] relative">
+            <div className="flex items-start gap-10">
+              <div className="kiri border-r-2 border-[#365E32] pr-10">
+                <h1 className="font-semibold text-xl mb-2">
+                  TENTANG SECONDLIFE
+                </h1>
+                <ul className="">
+                  <li className="mb-2">News and Article</li>
+                  <li className="mb-2">Stories</li>
+                  <li className="mb-2">Events</li>
+                </ul>
+                <div className="flex gap-4 mt-4">
+                  <div className="h-3 w-3 p-4 border-[3px] border-[#365E32] rounded-full flex justify-center items-center">
+                    <a href="#">
+                      <FaFacebookF className="text-xl" />
+                    </a>
+                  </div>
+                  <div className="h-3 w-3 p-4 border-[3px] border-[#365E32] rounded-full flex justify-center items-center">
+                    <a href="#">
+                      <FaLinkedinIn className="text-xl" />
+                    </a>
+                  </div>
+                  <div className="h-3 w-3 p-4 border-[3px] border-[#365E32] rounded-full flex justify-center items-center">
+                    <a href="#">
+                      <FaInstagram className="text-xl" />
+                    </a>
+                  </div>
+                  <div className="h-3 w-3 p-4 border-[3px] border-[#365E32] rounded-full flex justify-center items-center">
+                    <a href="#">
+                      <FaGithub className="text-xl" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div className="kanan">
+                <h1 className="font-semibold text-xl mb-2">NEWS AND EVENTS</h1>
+                <ul>
+                  <li className="mb-2">News and Article</li>
+                  <li className="mb-2">Stories</li>
+                  <li className="mb-2">Events</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
