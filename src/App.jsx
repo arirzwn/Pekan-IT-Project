@@ -15,6 +15,7 @@ function App() {
       <Tentang />
       <Aktifitas />
       <News />
+
       <Footer />
     </>
   );

@@ -45,3 +45,16 @@
 .kotaksatu {
     @apply w-[100%]
 }
+.uniform-size {
+    width: 450px; /* Set your desired width */
+    height: 450px; /* Set your desired height */
+}
+
+.timeline-start .timeline-content {
+  margin-right: auto;
+  text-align: right;
+}
+
+.timeline-end .timeline-content {
+  margin-left: auto;
+}

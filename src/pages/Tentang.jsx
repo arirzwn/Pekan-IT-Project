@@ -1,5 +1,5 @@
 import gambarTim from "/src/assets/gambar-tim.jpg";
-import gambarKota from "/src/assets/gambar-kota.jpg";
+import gambarKota from "/src/assets/gambarKota.png";
 import CountUp from "react-countup";
 
 export default function Tentang() {
@@ -19,27 +19,53 @@ export default function Tentang() {
           </p>
         </div>
         <div className="flex w-1/2 items-center justify-center gap-16">
-          <div className="h-28 w-28 relative">
-            <img
-              src={gambarKota}
-              alt="Gambar kota"
-              className="h-full object-cover rounded-full"
-            />
-            <div className="absolute left-[60px] top-[60px] text-green-600">
-              <CountUp end={17} duration={12} className=" text-7xl font-bold" />
-              <span>Kota</span>
+          <div className=" relative">
+            <figure className="w-40 h-40 rounded-full border-4 border-green-500 flex items-center justify-center">
+              <img
+                src={gambarKota}
+                alt="Gambar kota"
+                className="rounded-full border-2 border-white object-cover w-36 h-36 "
+              />
+            </figure>
+            <div>
+              <div className="absolute left-[100px] top-[95px] bg-green-600 rounded-full p-4 text-white w-20 h-20 flex justify-center items-center ">
+                <CountUp
+                  end={18}
+                  duration={12}
+                  className="text-3xl font-semibold"
+                />
+              </div>
+              <span
+                className="absolute left-[170px]   font-semibold
+               text-xl text-green-600"
+              >
+                Kota
+              </span>
             </div>
           </div>
 
-          <div className="h-28 w-28 relative">
-            <img
-              src={gambarTim}
-              alt="Gambar Tim"
-              className="h-full object-cover rounded-full "
-            />
-            <div className="absolute left-[60px] top-[60px] text-green-600">
-              <CountUp end={42} duration={12} className=" text-7xl font-bold" />
-              <span>Tim</span>
+          <div className=" relative">
+            <figure className="w-40 h-40 rounded-full border-4 border-green-500 flex items-center justify-center">
+              <img
+                src={gambarTim}
+                alt="Gambar kota"
+                className="rounded-full border-2 border-white object-cover w-36 h-36 "
+              />
+            </figure>
+            <div>
+              <div className="absolute left-[100px] top-[95px] bg-green-600 rounded-full p-4 text-white w-20 h-20 flex justify-center items-center ">
+                <CountUp
+                  end={29}
+                  duration={12}
+                  className="text-3xl font-semibold"
+                />
+              </div>
+              <span
+                className="absolute left-[170px]   font-semibold
+               text-xl text-green-600"
+              >
+                Tim
+              </span>
             </div>
           </div>
         </div>
