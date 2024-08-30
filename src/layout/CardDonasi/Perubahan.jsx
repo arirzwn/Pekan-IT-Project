@@ -13,7 +13,7 @@ import kananBawah from "../../assets/kanan-bawah.png";
 export default function Perubahan() {
   return (
     <>
-      <div className=" bg-[#FFF9ED] overflow-hidden">
+      <div className=" bg-[#FFF9ED] ">
         <div className="dekorasi-atas relative h-full">
           <div className="absolute top-0">
             <figure>

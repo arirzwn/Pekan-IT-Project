@@ -1,3 +1,5 @@
+import { formatCurrency } from "/src/utils/FormatCurrency.js";
+
 import Header from "../../components/Component Donasi/Header.jsx";
 import Step from "../../components/Component Donasi/Step.jsx";
 import Button from "../../components/Button.jsx";
@@ -5,7 +7,15 @@ import logoKris from "/src/assets/logo-kris.svg";
 import { LuWallet2 } from "react-icons/lu";
 import { AiFillBank } from "react-icons/ai";
 
-export default function DonationStepThree({ handleNextStep, activeStep }) {
+export default function DonationStepThree({
+  handleNextStep,
+  activeStep,
+  selectedNominal,
+  inputNominal,
+}) {
+  const nominal = selectedNominal || inputNominal;
+  const formattedNominal = formatCurrency(nominal.replace(/\D/g, ""));
+
   return (
     <>
       <div className="flex pb-5 justify-between">
@@ -32,7 +42,7 @@ export default function DonationStepThree({ handleNextStep, activeStep }) {
               Nominal Donasi
             </td>
             <td className="border-r border-t border-b border-[#47A603] w-full p-2 rounded-tr-md">
-              Rp10.000
+              Rp{formattedNominal}
             </td>
           </tr>
         </tbody>
@@ -42,7 +52,7 @@ export default function DonationStepThree({ handleNextStep, activeStep }) {
               Total Pembayaran
             </td>
             <td className="border-r border-t border-b border-[#47A603] w-full p-2 rounded-br-md">
-              Rp10.000
+              Rp{formattedNominal}
             </td>
           </tr>
         </tbody>

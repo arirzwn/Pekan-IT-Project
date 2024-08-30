@@ -56,14 +56,19 @@ export default function CardDonasi() {
       );
     } else if (next === 2) {
       return (
-        <DonationStepThree handleNextStep={handleNext} activeStep={next} />
+        <DonationStepThree
+          handleNextStep={handleNext}
+          activeStep={next}
+          selectedNominal={selectedNominal}
+          inputNominal={inputNominal}
+        />
       );
     }
   };
 
   return (
-    <div className="mb-24 mx-[70px]">
-      <div className="w-1/2 h-[500px] border rounded-xl shadow-xl">
+    <div className="mb-24 ">
+      <div className=" h-[500px] border rounded-xl shadow-xl">
         <div className="flex justify-center items-center w-full h-full">
           <div className="w-full mx-10">
             {/*<Step activeStep={next} />*/}
