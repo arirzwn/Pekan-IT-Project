@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
 import TentangKami from "./layout/TentangKami.jsx";
-import Donasi from "./pages/Donation.jsx";
+import Donasi from "./layout/CardDonasi/Donation.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>

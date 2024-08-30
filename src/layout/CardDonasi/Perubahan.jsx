@@ -1,47 +1,16 @@
-import gambar from "../assets/gambartangan.png";
-import gambarMemberi from "../assets/icon-memberi.png";
-import gambarCycle from "../assets/icon-cycle.png";
-import gambarTanam from "../assets/icon-menanam.png";
-import gambarTumbuh from "../assets/icon-grow.png";
-import atasKiri from "../assets/kiri-atas.png";
-import atasKanan from "../assets/kanan-atas.png";
-import kiriBawah from "../assets/kiri-bawah.png";
-import kananBawah from "../assets/kanan-bawah.png";
-import tengahPertama from "../assets/tengah-pertama.png";
-import tengahKedua from "../assets/tengah-dua.png";
-import tengahKetiga from "../assets/tengah-tiga.png";
-import Navbar from "../layout/Navbar/Navbar.jsx";
-import Button from "../components/Button.jsx";
+import atasKiri from "../../assets/kiri-atas.png";
+import atasKanan from "../../assets/kanan-atas.png";
+import gambarMemberi from "../../assets/icon-memberi.png";
+import tengahPertama from "../../assets/tengah-pertama.png";
+import tengahKedua from "../../assets/tengah-dua.png";
+import tengahKetiga from "../../assets/tengah-tiga.png";
+import gambarCycle from "../../assets/icon-cycle.png";
+import gambarTanam from "../../assets/icon-menanam.png";
+import gambarTumbuh from "../../assets/icon-grow.png";
+import kiriBawah from "../../assets/kiri-bawah.png";
+import kananBawah from "../../assets/kanan-bawah.png";
 
-export default function Donasi() {
-  return (
-    <>
-      <Navbar />
-      <div className="bg-[#DEF9C4] min-h-screen flex items-center relative">
-        <div className="mx-[70px]  grid grid-cols-2 items-center w-full relative z-10">
-          <div className="col-span-1">
-            <h1 className="text-5xl font-semibold">
-              Kecil untuk Anda, <br /> Besar untuk bumi.{" "}
-            </h1>
-            <p className="mt-5 leading-7">
-              Donasi Anda membantu kami menjalankan program konservasi, edukasi
-              lingkungan, dan kegiatan lainnya yang bertujuan melindungi planet
-              kita. Setiap rupiah yang Anda sumbangkan sangat berarti bagi masa
-              depan bumi.
-            </p>
-            <Button className="mt-5 text-white">Donasikan Sekarang!</Button>
-          </div>
-        </div>
-        <figure className="absolute right-0 bottom-0 z-0 flex items-center h-full">
-          <img src={gambar} alt="Gambar" className="h-auto" />
-        </figure>
-      </div>
-      <Perubahan />
-    </>
-  );
-}
-
-function Perubahan() {
+export default function Perubahan() {
   return (
     <>
       <div className=" bg-[#FFF9ED] overflow-hidden">
