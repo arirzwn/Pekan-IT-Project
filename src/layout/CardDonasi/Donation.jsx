@@ -1,5 +1,4 @@
 import gambar from "/src/assets/gambartangan.png";
-import Navbar from "/src/layout/Navbar/Navbar.jsx";
 import Button from "/src/components/Button.jsx";
 import Perubahan from "./Perubahan.jsx";
 import CardDonasi from "./CardDonasi.jsx";
@@ -8,7 +7,6 @@ import Footer from "../Footer/Footer.jsx";
 export default function Donasi() {
   return (
     <>
-      <Navbar />
       <div className="bg-[#DEF9C4] min-h-screen flex items-center relative ">
         <div className="mx-[70px]  grid grid-cols-2 items-center w-full relative z-10">
           <div className="col-span-1">

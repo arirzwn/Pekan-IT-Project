@@ -27,13 +27,13 @@ const timeline = [
 export default function TentangKami() {
   return (
     <>
-      <Navbar />
+      {/*<Navbar />*/}
       <div className="mx-[80px]">
         <Judul>Arisan's Journey</Judul>
       </div>
       {/*<TimeLine tahun={tahun} title={title} deskripsi={deskripsi} />*/}
       <TimeLine />
-      <Judul>Arisan's People</Judul>
+      <Judul className="mx-[80px]">Arisan's People</Judul>
       <CardAnggota />
       <Judul className="text-center text-5xl">Let's Collaborate!!!</Judul>
       <Button className="justify-center">BUTTON</Button>

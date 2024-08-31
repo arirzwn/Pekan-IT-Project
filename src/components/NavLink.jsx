@@ -1,21 +1,23 @@
+import { Link } from "react-router-dom";
+
 export default function Navlink() {
   return (
-    <div className="flex-none ">
-      <ul className="menu menu-horizontal px-1   gap-2 ">
+    <div className="flex-none">
+      <ul className="menu menu-horizontal px-1 gap-2">
         <li className="active:bg-green-200">
-          <a href="#">Beranda</a>
+          <Link to="/">Beranda</Link>
         </li>
         <li>
-          <a href="#">Tentang Kami</a>
+          <Link to="/tentang-kami">Tentang Kami</Link>
         </li>
         <li>
-          <a href="#">Galeri</a>
+          <Link to="/galeri">Galeri</Link>
         </li>
         <li>
-          <a href="#">Berita</a>
+          <Link to="/berita">Berita</Link>
         </li>
         <li>
-          <a href="#">Kontak</a>
+          <Link to="/kontak">Kontak</Link>
         </li>
       </ul>
     </div>
