@@ -1,5 +1,8 @@
+// src/layout/Footer/Footer.jsx
+import { useNavigate } from "react-router-dom";
 import bgFooter from "/src/assets/bg-footer.png";
 import logoFooter from "/src/assets/logo-footer.png";
+import normalLogo from "/src/assets/logo.png";
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
 import {
   FaFacebookF,
@@ -7,14 +10,16 @@ import {
   FaInstagram,
   FaGithub,
 } from "react-icons/fa";
-
 import Button from "../../components/Button.jsx";
+import "/src/index.css";
 
 export default function Footer() {
+  const navigate = useNavigate();
+
   return (
     <>
       <div>
-        <div className="flex  h-[350px]">
+        <div className="flex h-[350px]">
           <div className="relative w-1/2 overflow-hidden">
             <img
               src={bgFooter}
@@ -31,7 +36,10 @@ export default function Footer() {
                   <a href="#"> Partner With Us</a>
                   <IoArrowForwardCircleOutline className="text-3xl" />
                 </h3>
-                <Button className="mt-4 border-none text-white px-7">
+                <Button
+                  className="mt-4 border-none text-white px-7"
+                  onClick={() => navigate("/donation")}
+                >
                   DONASI
                 </Button>
               </div>
@@ -40,11 +48,15 @@ export default function Footer() {
           <div className="container bg-[#DEF9C4] w-1/2 flex justify-center items-center gap-10 text-sm text-[#365E32] relative">
             <div className="flex items-start gap-10">
               <div className="kiri border-r-2 border-[#365E32] pr-10">
-                <div className="flex mb-2">
-                  <h1 className="font-semibold text-xl  mr-2">TENTANG </h1>
-                  <a href="#">
-                    <img src={logoFooter} alt="Logo" className="w-28" />
-                  </a>
+                <div className="flex items-center mb-2">
+                  <div>
+                    <h1 className="font-semibold text-xl mr-2">TENTANG</h1>
+                  </div>
+                  <div className="-mt-2">
+                    <a href="#">
+                      <img src={logoFooter} alt="Logo" className="h-[1.5rem]" />
+                    </a>
+                  </div>
                 </div>
                 <ul className="">
                   <li className="mb-2">News and Article</li>
@@ -86,11 +98,13 @@ export default function Footer() {
           </div>
         </div>
         <div className="h-[100px] bg-[#365E32] px-[70px] flex justify-between items-center">
-          <a href="#">
+          <a href="#" className="flex gap-2 items-center">
             <p className="text-white">
               Copyright © {new Date().getFullYear()} - All right reserved by
-              SECONDLIFE
             </p>
+            <figure>
+              <img src={normalLogo} alt="" className="w-28" />
+            </figure>
           </a>
           <div className="flex gap-7">
             <label className="input input-bordered flex items-center gap-2">

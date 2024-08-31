@@ -9,7 +9,7 @@ import gambar7 from "/src/assets/gambar-7.png";
 export default function Aktifitas() {
   return (
     <>
-      <div>
+      <div id="aktifitas">
         <h1 className="my-10 font-bold text-2xl text-center">Aktivitas Kami</h1>
       </div>
       <div className="  grid  grid-cols-4 grid-rows-3 mx-[70px] gap-3 ">

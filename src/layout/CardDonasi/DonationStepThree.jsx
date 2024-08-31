@@ -24,13 +24,13 @@ export default function DonationStepThree({
       </div>
       <div className="flex w-full py-2 px-2 gap-4 !outline-none wrapper bg-[#DEF9C4] rounded-md border-2 border-[#47A603]">
         <Button className="flex-1 text-[#47A603] bg-transparent hover:bg-white focus:bg-white">
-          <LuWallet2 className="text-2xl" />
+          <LuWallet2 className="text-3xl" />
         </Button>
         <Button className="flex-1 text-[#47A603] bg-transparent hover:bg-white hover:border-none focus:bg-white">
-          <img src={logoKris} alt="Logo Kris" className="w-14" />
+          <img src={logoKris} alt="Logo Kris" className="" />
         </Button>
         <Button className="flex-1 text-[#47A603] bg-transparent hover:bg-white hover:border-none focus:bg-white">
-          <AiFillBank className="text-3xl" />
+          <AiFillBank className="text-4xl" />
         </Button>
       </div>
       <Header className="py-4">Ringkasan Pembayaran</Header>

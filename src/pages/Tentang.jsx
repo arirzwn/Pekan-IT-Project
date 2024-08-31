@@ -1,10 +1,13 @@
 import { useNavigate } from "react-router-dom";
 import CountUp from "react-countup";
+import { useInView } from "react-intersection-observer";
 import gambarKota from "/src/assets/gambarKota.png";
 import gambarTim from "/src/assets/gambar-tim.jpg";
 
 export default function Tentang() {
   const navigate = useNavigate();
+  const { ref: kotaRef, inView: kotaInView } = useInView({ triggerOnce: true });
+  const { ref: timRef, inView: timInView } = useInView({ triggerOnce: true });
 
   return (
     <section className="tentang mx-[70px]">
@@ -25,7 +28,7 @@ export default function Tentang() {
           </p>
         </div>
         <div className="flex w-1/2 items-center justify-center gap-16">
-          <div className="relative">
+          <div className="relative" ref={kotaRef}>
             <figure className="w-40 h-40 rounded-full border-4 border-green-500 flex items-center justify-center">
               <img
                 src={gambarKota}
@@ -36,7 +39,8 @@ export default function Tentang() {
             <div>
               <div className="absolute left-[100px] top-[95px] bg-green-600 rounded-full p-4 text-white w-20 h-20 flex justify-center items-center">
                 <CountUp
-                  end={18}
+                  start={0}
+                  end={kotaInView ? 18 : 0}
                   duration={12}
                   className="text-3xl font-semibold"
                 />
@@ -47,7 +51,7 @@ export default function Tentang() {
             </div>
           </div>
 
-          <div className="relative">
+          <div className="relative" ref={timRef}>
             <figure className="w-40 h-40 rounded-full border-4 border-green-500 flex items-center justify-center">
               <img
                 src={gambarTim}
@@ -58,7 +62,8 @@ export default function Tentang() {
             <div>
               <div className="absolute left-[100px] top-[95px] bg-green-600 rounded-full p-4 text-white w-20 h-20 flex justify-center items-center">
                 <CountUp
-                  end={29}
+                  start={0}
+                  end={timInView ? 29 : 0}
                   duration={12}
                   className="text-3xl font-semibold"
                 />

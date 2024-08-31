@@ -105,7 +105,7 @@ export default function CardVideo() {
         style={{ cursor: isDragging ? "grabbing" : "grab" }}
       >
         {listVideo.map((video, index) => (
-          <div key={index} className="w-1/3 h-[420px] flex-shrink-0">
+          <div key={index} className="w-1/3 h-[400px] flex-shrink-0">
             <figure className="relative overflow-hidden h-52 rounded-md">
               <img
                 src={video.thumbnail}

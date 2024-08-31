@@ -1,3 +1,5 @@
+import { useEffect, useRef } from "react";
+import { useLocation } from "react-router-dom";
 import { Header } from "../layout/Header/Header.jsx";
 import Tentang from "./Tentang.jsx";
 import Aktifitas from "./Aktifitas.jsx";
@@ -6,18 +8,26 @@ import News from "./News.jsx";
 import Footer from "../layout/Footer/Footer.jsx";
 import banner from "/src/assets/Banner.png";
 import Button from "../components/Button.jsx";
-import { useNavigate } from "react-router-dom";
 
 export const Home = () => {
-  const navigate = useNavigate();
+  const location = useLocation();
+  const aktifitasRef = useRef(null);
+
+  useEffect(() => {
+    if (location.pathname === "/galeri" && aktifitasRef.current) {
+      aktifitasRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [location]);
 
   return (
     <>
       <Header />
       <Tentang />
-      <Aktifitas />
+      <div id="aktifitas" ref={aktifitasRef}>
+        <Aktifitas />
+      </div>
       <Video />
-      <div className="mt-20">
+      <div className="">
         <figure className="relative w-full h-full flex items-center justify-center">
           <img src={banner} alt="Gambar Banner" className="w-full h-full" />
           <span className="absolute text-4xl font-light text-white">
@@ -26,7 +36,7 @@ export const Home = () => {
         </figure>
       </div>
       <News />
-      <Footer />
+      {/*<Footer />*/}
     </>
   );
 };

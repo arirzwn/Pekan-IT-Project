@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
 
 export default function Navlink() {
   return (
@@ -11,10 +12,14 @@ export default function Navlink() {
           <Link to="/tentang-kami">Tentang Kami</Link>
         </li>
         <li>
-          <Link to="/galeri">Galeri</Link>
+          <ScrollLink to="aktifitas" smooth={true} duration={500}>
+            Galeri
+          </ScrollLink>
         </li>
         <li>
-          <Link to="/berita">Berita</Link>
+          <ScrollLink to="berita" smooth={true} duration={500}>
+            Berita
+          </ScrollLink>
         </li>
         <li>
           <Link to="/kontak">Kontak</Link>

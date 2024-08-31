@@ -8,5 +8,8 @@ export default {
       },
     },
   },
+  daisyui: {
+    themes: [],
+  },
   plugins: [require("daisyui"), require("tailwindcss-highlights")],
 };

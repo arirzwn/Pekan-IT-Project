@@ -5,7 +5,7 @@ export default function Logo() {
     <div className="flex-1">
       <a className="btn btn-ghost ">
         {" "}
-        <img src={logo} alt="Logo" className="w-36" />{" "}
+        <img src={logo} alt="Logo" className=" h-10" />{" "}
       </a>
     </div>
   );

@@ -1,14 +1,13 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
+import { BrowserRouter as Router } from "react-router-dom";
 import App from "./App.jsx";
 import "./index.css";
-import TentangKami from "./layout/TentangKami.jsx";
-import Donasi from "./layout/CardDonasi/Donation.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <App />
-    {/*<TentangKami />*/}
-    {/*<Donasi />*/}
+    <Router>
+      <App />
+    </Router>
   </StrictMode>,
 );
