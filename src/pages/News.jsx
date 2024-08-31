@@ -22,14 +22,13 @@ export default function News() {
                 <h3 className="text-[20px] font-semibold mt-4 mb-2">
                   Pengelolaan Sampah Bersama UMKM
                 </h3>
-                <p className="text-sm text-justify">
-                  Lorem ipsum dolor sit amet consectetur. Aliquam augue faucibus
-                  fermentum accumsan nec consectetur a quis aliquet. Pretium
-                  orci aenean felis ut sagittis diam consectetur diam. Enim
-                  dolor et quis laoreet. Elit amet amet amet diam odio. Eget
-                  imperdiet penatibus ac convallis. Dictum morbi viverra amet at
-                  diam. Sollicitudin aliquam non turpis proin. Eget semper
-                  habitant interdum ut mollis. Etiam egestas diam vel vitae.
+                <p className="text-sm text-justify leading-loose">
+                  Pengelolaan limbah sampah organik dan non organik berdampak
+                  pada kenyamanan di lingkungan perumahan di daerah Cileungsi
+                  mempunyai dampak yang kurang baik bagi lingkungan. Dalam
+                  proses pengelolaan sampah organic ini menggunakan alat
+                  pencacah, dimana perlu adanya pelatihan tentang tata cara
+                  pengoperasian maupun perawatan yang baik dan benar.
                 </p>
                 <Button className="border-none h-[40px] text-white my-4 rounded-full">
                   Selengkapnya
@@ -39,11 +38,11 @@ export default function News() {
           </div>
 
           {/*Kanan*/}
-          <div className=" col-start-2 grid grid-rows-2 gap-y-3">
-            <div className="grid grid-cols-2 gap-x-3">
+          <div className=" col-start-2 grid  grid-rows-2 gap-y-3">
+            <div className="grid grid-cols-2 gap-x-3 border border-black">
               {/*kotak satu*/}
-              <div className="kotaksatu col-start-1 w-full">
-                <div className="relative  rounded-[20px] overflow-hidden">
+              <div className="kotaksatu col-start-1">
+                <div className="relative  rounded-[20px] overflow-hidden ">
                   <figure className=" rounded-md overflow-hidden">
                     <img
                       className="rounded-tl-[20px] "
@@ -64,19 +63,19 @@ export default function News() {
                 </div>
               </div>
               {/*Kotak dua*/}
-              <Box className="col-start-2 text-2xl bg-[#47a603] rounded-xl p-4">
+              <Box className="col-start-2 text-2xl bg-[#47a603] h-full rounded-xl p-4">
                 Ayo berkontribusi untuk menjaga bumi kita agar hidup lebih
                 sehat.
               </Box>
             </div>
             {/*Bagian bawah*/}
-            <div className="border border-black rounded-xl">
-              <div className="flex gap-4">
+            <div className="border border-black  rounded-xl">
+              <div className="flex h-full gap-4">
                 <figure className="w-1/2 h-full">
                   <img
                     src={GambarJualan}
                     alt="Gambar Jualan"
-                    className="rounded-md"
+                    className="rounded-md h-full"
                   />
                 </figure>
                 <div className="w-1/2">

@@ -1,52 +1,12 @@
 import { Card } from "../../components/Card.jsx";
-
-const gambar = [
-  {
-    image:
-      "https://images.unsplash.com/photo-1643701322278-768c884dc527?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    title: "Donate and help the environment",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  },
-  {
-    image:
-      "https://images.unsplash.com/photo-1611284446314-60a58ac0deb9?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    title: "Donate and help the ",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  },
-  {
-    image:
-      "https://images.unsplash.com/photo-1657310217094-2214abf4fd88?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    title: "Donate and help the ",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  },
-  {
-    image:
-      "https://images.unsplash.com/photo-1647891937869-bc31fe3f9836?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    title: "Donate and help the ",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  },
-  {
-    image:
-      "https://images.unsplash.com/photo-1647891936817-e46599e151b8?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    title: "Donate and help the ",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  },
-  {
-    image:
-      "https://images.unsplash.com/photo-1657310217346-c452fb3fb785?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    title: "Donate and help the ",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  },
-];
+import gambarKiri from "/src/assets/gambar-hero-kiri.png";
+import gambarKanan from "/src/assets/gambar-hero-kanan.png";
 
 export function InfoGrafis() {
   return (
     <>
       <div className="flex  justify-between items-center mt-10 ">
-        <Card
-          gambar="https://images.unsplash.com/photo-1611284446314-60a58ac0deb9?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          className="w-[238px] h-[116px]"
-        />{" "}
+        <Card gambar={gambarKiri} className="w-[238px] h-[116px]" />{" "}
         <Card
           gambar="/src/assets/gambar-donate.png"
           className="w-[238px] h-[275px] "
@@ -57,14 +17,20 @@ export function InfoGrafis() {
           className="w-[236px] h-[364px]"
           teks=" Share with us your result"
         />
-        <Card
-          gambar="https://images.unsplash.com/photo-1611284446314-60a58ac0deb9?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          className="w-[238px] h-[275px] "
-        />
-        <Card
-          gambar="https://images.unsplash.com/photo-1611284446314-60a58ac0deb9?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          className="w-[238px] h-[116px]"
-        />{" "}
+        <div className=" text-center w-[238px] h-[275px]">
+          <div className="bg-gray-300 rounded-[30px] z-0 ">
+            <p>
+              Lebih dari 123 pohon ditanam dengan bantuan para aktivis kami.
+            </p>
+          </div>
+          <div className="bg-green-500 rounded-xl z-10 h-32">
+            <p>
+              3 program pendidikan diresmikan dan dikembangkan oleh spesialis
+              kami untuk pendidikan anak-anak.
+            </p>
+          </div>
+        </div>
+        <Card gambar={gambarKanan} className="w-[238px] h-[116px]" />{" "}
       </div>
     </>
   );

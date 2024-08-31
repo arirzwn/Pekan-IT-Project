@@ -28,7 +28,9 @@ export default function TentangKami() {
   return (
     <>
       <Navbar />
-      <Judul>Arisan's Journey</Judul>
+      <div className="mx-[80px]">
+        <Judul>Arisan's Journey</Judul>
+      </div>
       {/*<TimeLine tahun={tahun} title={title} deskripsi={deskripsi} />*/}
       <TimeLine />
       <Judul>Arisan's People</Judul>
