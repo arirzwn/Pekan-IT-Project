@@ -3,6 +3,7 @@ import gambarKiri from "/src/assets/gambar-hero-kiri.png";
 import gambarKanan from "/src/assets/gambar-hero-kanan.png";
 import gambarDonate from "/src/assets/gambar-donate.png";
 import gambarUtama from "/src/assets/gambar-utama.png";
+import kanan from "/src/assets/hero-kanan.png";
 
 export function InfoGrafis() {
   return (
@@ -19,18 +20,10 @@ export function InfoGrafis() {
           className="w-[236px] h-[364px]"
           teks=" Share with us your result"
         />
-        <div className=" text-center w-[238px] h-[275px]">
-          <div className="bg-gray-300 rounded-[30px] z-0 ">
-            <p>
-              Lebih dari 123 pohon ditanam dengan bantuan para aktivis kami.
-            </p>
-          </div>
-          <div className="bg-green-500 rounded-xl z-10 h-32">
-            <p>
-              3 program pendidikan diresmikan dan dikembangkan oleh spesialis
-              kami untuk pendidikan anak-anak.
-            </p>
-          </div>
+        <div className="text-center w-[238px] h-[275px]">
+          <figure>
+            <img src={kanan} alt="" draggable="false" />
+          </figure>
         </div>
         <Card gambar={gambarKanan} className="w-[238px] h-[116px]" />{" "}
       </div>
