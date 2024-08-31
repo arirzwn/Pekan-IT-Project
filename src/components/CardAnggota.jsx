@@ -1,13 +1,13 @@
-import fotoProfile1 from "../assets/background-image.jpg";
-import fotoProfile2 from "../assets/background-image.jpg";
-import fotoProfile3 from "../assets/background-image.jpg";
-import fotoProfile4 from "../assets/background-image.jpg";
+import fotoProfile1 from "../assets/foto-ari.png";
+import fotoProfile2 from "../assets/foto-adit.png";
+import fotoProfile3 from "../assets/foto-risma.png";
+import fotoProfile4 from "../assets/foto-ikhsan.png";
 
 const dataAnggota = [
-  { img: fotoProfile1, nama: "Ari Rizwan", jabatan: "CEO" },
-  { img: fotoProfile2, nama: "Aditya Daffa Syahputra", jabatan: "CEO" },
-  { img: fotoProfile3, nama: "M. Ikhsan Rizki Yanuar", jabatan: "CEO" },
-  { img: fotoProfile4, nama: "Risma Salsabila Aulia", jabatan: "CEO" },
+  { img: fotoProfile1, nama: "Ari Rizwan", jabatan: "Founder" },
+  { img: fotoProfile2, nama: "Aditya Daffa Syahputra", jabatan: "Founder" },
+  { img: fotoProfile4, nama: "Risma Auliya Salsabilla", jabatan: "Founder" },
+  { img: fotoProfile3, nama: "M. Ikhsan Rizki Yanuar", jabatan: "Founder" },
 ];
 
 export default function CardAnggota() {
@@ -26,7 +26,9 @@ export default function CardAnggota() {
             </figure>
             <div className=" flex flex-col justify-between mt-2 w-56 text-center">
               <p className="font-semibold break-words">{data.nama}</p>
-              <p className="break-words">{data.jabatan}</p>
+              <p className="break-words text-[#FF9100] font-semibold">
+                {data.jabatan}
+              </p>
             </div>
           </div>
         ))}
