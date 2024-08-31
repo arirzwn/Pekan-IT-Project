@@ -6,7 +6,7 @@ import DeskripsiVideo from "./DeskripsiVideo.jsx";
 
 const listVideo = [
   {
-    thumbnail: "/src/assets/video3.jpeg",
+    thumbnail: "/assets/video3.jpeg",
     durasi: "05:23",
     judul:
       "Mengisi kegiatan di rumah dengan memanfaatkan paralon untuk hidroponik",
@@ -14,21 +14,21 @@ const listVideo = [
       "Hidroponik adalah metode bercocok tanam yang menggunakan air dan larutan nutrisi sebagai pengganti tanah.",
   },
   {
-    thumbnail: "/src/assets/video2.jpeg",
+    thumbnail: "/assets/video2.jpeg",
     durasi: "06:12",
     judul: "Mengenal “bank” sampah",
     deskripsi:
       "Tempat untuk mengumpulkan dan memilah sampah kering, yang dijalankan seperti bank, di mana masyarakat dapat menabung sampah dan mendapatkan uang",
   },
   {
-    thumbnail: "/src/assets/video1.png",
+    thumbnail: "/assets/video1.png",
     durasi: "07:11",
     judul: "Reduce, Reuse, Recycle : “Apa itu?”",
     deskripsi:
       "prinsip pengelolaan sampah yang efektif untuk mengurangi jumlah sampah yang dihasilkan dan memanfaatkan kembali sampah yang dapat didaur ulang",
   },
   {
-    thumbnail: "/src/assets/video4.jpeg",
+    thumbnail: "/assets/video4.jpeg",
     durasi: "08:00",
     judul:
       "Begini Proses Daur Ulang Sampah Plastik Menjadi Produk Jadi Di Negara Maju",
@@ -36,7 +36,7 @@ const listVideo = [
       "Dalam aktifitas kehidupan modern, kita tidak bisa menghindari produksi sampah plastic. Hal ini karena plastic digunakan hampir disetiap kegiatan sehari-hari, mulai dari....",
   },
   {
-    thumbnail: "/src/assets/video4.jpeg",
+    thumbnail: "/assets/video4.jpeg",
     durasi: "09:00",
     judul:
       "Begini Proses Daur Ulang Sampah Plastik Menjadi Produk Jadi Di Negara Maju",
