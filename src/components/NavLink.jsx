@@ -1,7 +1,7 @@
 export default function Navlink() {
   return (
     <div className="flex-none ">
-      <ul className="menu menu-horizontal px-1  gap-2 ">
+      <ul className="menu menu-horizontal px-1   gap-2 ">
         <li className="active:bg-green-200">
           <a href="#">Beranda</a>
         </li>

@@ -20,16 +20,17 @@ export default function Perubahan() {
               <img src={atasKiri} alt="Icon" />
             </figure>
           </div>
-          <div className="absolute right-0 -top-20">
+          <div className="absolute right-0  ">
             <figure>
-              <img src={atasKanan} alt="Icon" />
+              <img src={atasKanan} alt="Icon" className="h-full object-cover" />
             </figure>
           </div>
+          <div className="mt-0">
+            <h3 className="text-center pt-5 pb-10 font-semibold text-[#678D72] text-2xl">
+              Bagaimana Donasi Anda Membuat Perubahan?
+            </h3>
+          </div>
         </div>
-
-        <h3 className="text-center pt-5 pb-10 font-semibold text-[#678D72] text-2xl">
-          Bagaimana Donasi Anda Membuat Perubahan?
-        </h3>
 
         <div className="flex flex-col  mx-auto w-3/5 ">
           <div className="story flex flex-col relative">
@@ -87,7 +88,7 @@ export default function Perubahan() {
                 </p>
               </div>
             </div>
-            <div className="gambar-empat flex flex-col items-center w-[335px] self-end mt-10">
+            <div className="gambar-empat flex flex-col items-center w-[335px] self-end -mb-14">
               <figure>
                 <img src={gambarTumbuh} alt="" />
               </figure>
@@ -108,10 +109,16 @@ export default function Perubahan() {
               <img src={kiriBawah} alt="icon" />
             </figure>
           </div>
-          <div className="absolute right-0 -bottom-16 -rotate-12 ">
-            <figure>
-              <img src={kananBawah} alt="icon" />
-            </figure>
+          <div className="relative h-64 overflow-hidden">
+            <div className="absolute right-0  -top-5 -rotate-12">
+              <figure>
+                <img
+                  src={kananBawah}
+                  alt="icon"
+                  className="h-full object-cover"
+                />
+              </figure>
+            </div>
           </div>
         </div>
       </div>

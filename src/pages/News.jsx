@@ -7,14 +7,16 @@ import Box from "../components/Box.jsx";
 export default function News() {
   return (
     <>
-      <div className=" my-20 bg-[#A2CA7C]">
-        <h1 className="text-2xl font-semibold text-center mt-10 mb-10">News</h1>
-        <div className="mx-auto mt-20 grid grid-cols-2 justify-center  gap-4 max-w-5xl">
+      <div className=" bg-[#D5ED9F]">
+        <h1 className="py-6  text-white text-2xl font-semibold text-center ">
+          News
+        </h1>
+        <div className=" pb-10 mx-auto  grid grid-cols-2 justify-center  gap-4 max-w-5xl ">
           {/*kiri*/}
-          <div className="col-start-1 border border-black rounded-md">
+          <div className="col-start-1 rounded-md bg-white">
             <div className="col-start-1">
-              <figure>
-                <img src={GambarNews} alt="Gambar 5" />
+              <figure className="overflow-hidden rounded-md">
+                <img src={GambarNews} alt="Gambar 5" className="scale-110" />
               </figure>
               <div className="px-8 ">
                 <h3 className="text-[20px] font-semibold mt-4 mb-2">

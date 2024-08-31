@@ -67,7 +67,7 @@ export default function CardDonasi() {
   };
 
   return (
-    <div className="mb-24 ">
+    <div className="">
       <div className=" h-[500px] border rounded-xl shadow-xl">
         <div className="flex justify-center items-center w-full h-full">
           <div className="w-full mx-10">

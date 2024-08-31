@@ -9,7 +9,7 @@ export default function Donasi() {
   return (
     <>
       <Navbar />
-      <div className="bg-[#DEF9C4] min-h-screen flex items-center relative">
+      <div className="bg-[#DEF9C4] min-h-screen flex items-center relative ">
         <div className="mx-[70px]  grid grid-cols-2 items-center w-full relative z-10">
           <div className="col-span-1">
             <h1 className="text-5xl font-semibold">
@@ -29,8 +29,10 @@ export default function Donasi() {
         </figure>
       </div>
       <Perubahan />
-      <div className="flex mx-[70px] gap-10 mt-10">
-        <CardDonasi />
+      <div className="flex mx-[70px] gap-10  items-center justify-center h-screen">
+        <div className="w-1/2">
+          <CardDonasi />
+        </div>
         <div className="w-1/2">
           <h1 className="text-4xl font-semibold text-[#47A603] leading-snug">
             Setiap Rupiah <br /> untuk Lingkungan

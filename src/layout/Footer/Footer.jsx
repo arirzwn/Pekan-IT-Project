@@ -1,4 +1,5 @@
 import bgFooter from "/src/assets/bg-footer.png";
+import logoFooter from "/src/assets/logo-footer.png";
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
 import {
   FaFacebookF,
@@ -39,9 +40,12 @@ export default function Footer() {
           <div className="container bg-[#DEF9C4] w-1/2 flex justify-center items-center gap-10 text-sm text-[#365E32] relative">
             <div className="flex items-start gap-10">
               <div className="kiri border-r-2 border-[#365E32] pr-10">
-                <h1 className="font-semibold text-xl mb-2">
-                  TENTANG SECONDLIFE
-                </h1>
+                <div className="flex mb-2">
+                  <h1 className="font-semibold text-xl  mr-2">TENTANG </h1>
+                  <a href="#">
+                    <img src={logoFooter} alt="Logo" className="w-28" />
+                  </a>
+                </div>
                 <ul className="">
                   <li className="mb-2">News and Article</li>
                   <li className="mb-2">Stories</li>

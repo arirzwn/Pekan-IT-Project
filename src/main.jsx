@@ -7,8 +7,8 @@ import Donasi from "./layout/CardDonasi/Donation.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    {/*<App />*/}
+    <App />
     {/*<TentangKami />*/}
-    <Donasi />
+    {/*<Donasi />*/}
   </StrictMode>,
 );

@@ -6,6 +6,7 @@ import News from "./pages/News.jsx";
 import Footer from "./layout/Footer/Footer.jsx";
 import Tentang from "./pages/Tentang.jsx";
 import Aktifitas from "./pages/Aktifitas.jsx";
+import Video from "./pages/Video.jsx";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Home />
       <Tentang />
       <Aktifitas />
+      <Video />
       <News />
 
       <Footer />
