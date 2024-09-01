@@ -3,7 +3,10 @@ import "/src/index.css";
 export function Banner({ children }) {
   return (
     <>
-      <div className="img-background  rounded-md  mt-5  text-center  text-5xl font-normal leading-snug">
+      <div
+        className="container img-background  rounded-md  mt-5  text-center  text-5xl font-normal leading-snug
+      "
+      >
         <span className="highlight-text text-white">
           Join us in the fight for <br /> the environment
         </span>

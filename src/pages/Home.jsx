@@ -23,11 +23,7 @@ export const Home = () => {
     <>
       <Header />
       <Tentang />
-      <div id="aktifitas" ref={aktifitasRef}>
-        <Aktifitas />
-      </div>
-      <Video />
-      <div className="">
+      <div className="mt-16">
         <figure className="relative w-full h-full flex items-center justify-center">
           <img src={banner} alt="Gambar Banner" className="w-full h-full" />
           <span className="absolute text-4xl font-light text-white">
@@ -35,6 +31,12 @@ export const Home = () => {
           </span>
         </figure>
       </div>
+
+      <div id="aktifitas" ref={aktifitasRef}>
+        <Aktifitas />
+      </div>
+      <Video />
+
       <News />
       {/*<Footer />*/}
     </>

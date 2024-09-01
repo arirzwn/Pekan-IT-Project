@@ -11,11 +11,11 @@ export default function News() {
         <h1 className="py-6  text-2xl font-semibold text-center text-black">
           Berita
         </h1>
-        <div className="pb-10 mx-auto grid grid-cols-2 justify-center gap-4 max-w-5xl">
+        <div className=" px-20  pb-10 mx-auto grid grid-cols-2 justify-center gap-4 ">
           {/*kiri*/}
-          <div className="col-start-1 rounded-md bg-white">
+          <div className="col-start-1 rounded-xl bg-white">
             <div className="col-start-1">
-              <figure className="overflow-hidden rounded-md">
+              <figure className="overflow-hidden rounded-xl">
                 <img src={GambarNews} alt="Gambar 5" className="scale-110" />
               </figure>
               <div className="px-8">
