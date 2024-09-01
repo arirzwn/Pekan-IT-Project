@@ -87,10 +87,27 @@
   transform: scale(0.9);
   transition: opacity 300ms, transform 300ms;
 }
-/* Add this CSS to your stylesheet */
+
 img {
   object-fit: cover;
   width: 100%;
   height: 100%;
 }
 
+.modal-box {
+  width: 70vw;
+  max-width: 70vw;
+}
+
+.card-container {
+  transition: transform 0.3s ease;
+}
+
+.card-container:hover {
+  transform: scale(1.05);
+}
+
+.active-link {
+  @apply underline underline-offset-8 decoration-green-500;
+
+}

@@ -9,7 +9,8 @@ export default {
     },
   },
   daisyui: {
-    themes: [],
+    themes: ["lemonade", "cmyk"],
+    // themes: [],
   },
   plugins: [require("daisyui"), require("tailwindcss-highlights")],
 };
