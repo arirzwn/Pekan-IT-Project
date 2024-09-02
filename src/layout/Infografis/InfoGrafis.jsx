@@ -15,6 +15,9 @@ export function InfoGrafis() {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    initialSlide: 2, // Start from the third item
+    autoplay: true, // Enable auto scroll
+    autoplaySpeed: 2400, // Set auto scroll interval to 3 seconds
     responsive: [
       {
         breakpoint: 640, // max-sm

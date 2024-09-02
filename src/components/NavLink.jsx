@@ -2,10 +2,12 @@ import { NavLink } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import "/src/index.css";
 
-export default function Navlink() {
+export default function Navlink({ vertical }) {
   return (
     <div className="flex-none">
-      <ul className="menu menu-horizontal px-1 gap-2">
+      <ul
+        className={`menu ${vertical ? "menu-vertical w-full" : "menu-horizontal px-1 gap-2"}`}
+      >
         <li>
           <NavLink
             to="/"
