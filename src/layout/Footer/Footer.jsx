@@ -1,4 +1,3 @@
-// src/layout/Footer/Footer.jsx
 import { useNavigate } from "react-router-dom";
 import bgFooter from "/src/assets/bg-footer.png";
 import logoFooter from "/src/assets/logo-footer.png";
@@ -18,7 +17,8 @@ export default function Footer() {
 
   return (
     <>
-      <div>
+      {/* Untuk tampilan desktop */}
+      <div className="hidden xl:block">
         <div className="flex h-[350px]">
           <div className="relative w-1/2 overflow-hidden">
             <img
@@ -123,6 +123,92 @@ export default function Footer() {
           </div>
         </div>
       </div>
+
+      {/* Untuk tampilan mobile / max-sm */}
+      <footer className="block xl:hidden">
+        <div className="relative  ">
+          <img src={bgFooter} alt="Background" className=" object-cover" />
+          <div className="bg-[#365E32] bg-opacity-65 absolute inset-0 flex justify-center items-center">
+            <div className="text-center">
+              <h3 className="uppercase text-2xl font-semibold text-white mb-5 flex items-center justify-center gap-3">
+                <a href="#"> Take Action </a>
+                <IoArrowForwardCircleOutline className="text-3xl" />
+              </h3>
+              <h3 className="uppercase text-2xl font-semibold text-white flex items-center justify-center gap-3">
+                <a href="#"> Partner With Us</a>
+                <IoArrowForwardCircleOutline className="text-3xl" />
+              </h3>
+              <Button
+                className="mt-4 border-none text-white px-7"
+                onClick={() => navigate("/donation")}
+              >
+                DONASI
+              </Button>
+            </div>
+          </div>
+        </div>
+        <div className="container bg-[#DEF9C4] px-5 py-3 text-[#365E32] relative">
+          <div className="flex justify-center gap-5 ">
+            <div className="kiri border-r-2 border-[#365E32] pr-10">
+              <div className="flex items-center mb-2 ">
+                <div>
+                  <h1 className="font-semibold text-sm mr-2">TENTANG</h1>
+                </div>
+                <div className="-mt-2">
+                  <a href="#">
+                    <img src={logoFooter} alt="Logo" className="h-[1.2rem]" />
+                  </a>
+                </div>
+              </div>
+              <ul className="text-xs">
+                <li className="">News and Article</li>
+                <li className="">Stories</li>
+                <li className="">Events</li>
+              </ul>
+              <div className="flex gap-4 mt-4">
+                <div className="h-3 w-3 p-4 border-[3px] border-[#365E32] rounded-full flex justify-center items-center">
+                  <a href="#">
+                    <FaFacebookF className="text-xl" />
+                  </a>
+                </div>
+                <div className="h-3 w-3 p-4 border-[3px] border-[#365E32] rounded-full flex justify-center items-center">
+                  <a href="#">
+                    <FaLinkedinIn className="text-xl" />
+                  </a>
+                </div>
+                <div className="h-3 w-3 p-4 border-[3px] border-[#365E32] rounded-full flex justify-center items-center">
+                  <a href="#">
+                    <FaInstagram className="text-xl" />
+                  </a>
+                </div>
+                <div className="h-3 w-3 p-4 border-[3px] border-[#365E32] rounded-full flex justify-center items-center">
+                  <a href="#">
+                    <FaGithub className="text-xl" />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="kanan">
+              <h1 className="font-semibold text-sm mb-2">NEWS AND EVENTS</h1>
+              <ul className="text-xs">
+                <li>News and Article</li>
+                <li>Stories</li>
+                <li>Events</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div className=" bg-[#365E32] py-2 flex justify-center items-center">
+          <a href="#" className="flex gap-2 items-center justify-center">
+            <p className="text-white footer ">
+              Copyright © {new Date().getFullYear()} - All right reserved by
+            </p>
+            <figure>
+              <img src={normalLogo} alt="" draggable="false" className="w-16" />
+            </figure>
+          </a>
+        </div>
+      </footer>
     </>
   );
 }

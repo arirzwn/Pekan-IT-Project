@@ -1,5 +1,4 @@
-// src/components/Component Video Card/CardVideo.jsx
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import PlayerVideo from "../../layout/PlayerVideo";
 
 // Define the missing components
@@ -79,7 +78,29 @@ export default function CardVideo() {
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
   const [selectedVideo, setSelectedVideo] = useState(null);
+  const [currentSlide, setCurrentSlide] = useState(0);
   const carouselRef = useRef(null);
+  const touchStartX = useRef(0);
+  const touchEndX = useRef(0);
+
+  useEffect(() => {
+    if (currentSlide === listVideo.length) {
+      setTimeout(() => {
+        setCurrentSlide(0);
+        carouselRef.current.style.transition = "none";
+        carouselRef.current.style.transform = `translateX(0)`;
+      }, 300);
+    } else if (currentSlide === -1) {
+      setTimeout(() => {
+        setCurrentSlide(listVideo.length - 1);
+        carouselRef.current.style.transition = "none";
+        carouselRef.current.style.transform = `translateX(-${(listVideo.length - 1) * 100}%)`;
+      }, 300);
+    } else {
+      carouselRef.current.style.transition = "transform 0.3s ease-in-out";
+      carouselRef.current.style.transform = `translateX(-${currentSlide * 100}%)`;
+    }
+  }, [currentSlide]);
 
   const handleMouseDown = (e) => {
     setIsDragging(true);
@@ -109,21 +130,44 @@ export default function CardVideo() {
     document.getElementById("my_modal_4").showModal();
   };
 
+  const handleTouchStart = (e) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchMove = (e) => {
+    touchEndX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    if (touchStartX.current - touchEndX.current > 50) {
+      setCurrentSlide((prev) => (prev + 1) % listVideo.length);
+    }
+
+    if (touchStartX.current - touchEndX.current < -50) {
+      setCurrentSlide(
+        (prev) => (prev - 1 + listVideo.length) % listVideo.length,
+      );
+    }
+  };
+
   return (
     <>
       <div
-        className="mt-6 flex gap-x-4 overflow-x-scroll no-scrollbar"
+        className="mt-6 flex gap-x-4 overflow-x-scroll no-scrollbar max-sm:flex-col max-sm:overflow-hidden"
         ref={carouselRef}
         onMouseDown={handleMouseDown}
         onMouseMove={handleMouseMove}
         onMouseUp={handleMouseUp}
         onMouseLeave={handleMouseLeave}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
         style={{ cursor: isDragging ? "grabbing" : "grab" }}
       >
         {listVideo.map((video, index) => (
           <div
             key={index}
-            className="w-1/3 h-[400px] flex-shrink-0"
+            className={`w-1/3 h-[400px] flex-shrink-0 max-sm:w-full max-sm:h-auto max-sm:${index === currentSlide ? "block" : "hidden"}`}
             onClick={() => handleCardClick(video)}
           >
             <figure className="relative overflow-hidden h-52 rounded-md">
