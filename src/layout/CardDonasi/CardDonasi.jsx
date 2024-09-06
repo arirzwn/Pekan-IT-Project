@@ -68,9 +68,9 @@ export default function CardDonasi() {
 
   return (
     <div className="">
-      <div className=" h-[500px] border rounded-xl shadow-xl">
+      <div className=" h-[500px] mb-10 border rounded-xl shadow-xl">
         <div className="flex justify-center items-center w-full h-full">
-          <div className="w-full mx-10">
+          <div className="w-full mx-5">
             {/*<Step activeStep={next} />*/}
             {ShowStep()}
             <Button className="w-full mt-5 text-white" onClick={handleNext}>

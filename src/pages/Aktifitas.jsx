@@ -57,7 +57,7 @@ export default function Aktifitas() {
   return (
     <>
       <div id="aktifitas" ref={sectionRef}>
-        <h1 className="my-10 font-bold text-2xl text-center">Aktivitas Kami</h1>
+        <h1 className="my-10 font-bold text-2xl text-center">Aksi Kami</h1>
       </div>
       <div className="grid grid-cols-4 grid-rows-3 mx-[70px] gap-3">
         {[gambar1, gambar2, gambar3, gambar4, gambar5, gambar6, gambar7].map(

@@ -6,7 +6,7 @@ export default function Video() {
       <div className="mx-[70px]">
         <div>
           <h1 className="text-2xl font-semibold mt-7 text-center">
-            Video Aktifitas Terkait
+            Video Seru Kami
           </h1>
         </div>
         <div>

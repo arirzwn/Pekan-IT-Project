@@ -1,4 +1,7 @@
 import { useState } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import "/src/index.css";
 import DetailAnggota from "../layout/DetailAnggota";
 import fotoProfile1 from "../assets/foto-ari.png";
@@ -65,9 +68,38 @@ export default function CardAnggota() {
     document.getElementById("my_modal_3").showModal();
   };
 
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    appendDots: (dots) => (
+      <div style={{ position: "relative", top: "0px" }}>
+        <ul style={{ margin: "0px" }}> {dots} </ul>
+      </div>
+    ),
+    responsive: [
+      {
+        breakpoint: 1280,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+
   return (
     <>
-      <div className="flex items-center justify-center gap-4 mb-24">
+      <div className="max-sm:hidden flex items-center justify-center gap-4 mb-24">
         {dataAnggota.map((data, index) => (
           <div key={index} className="card-container max-w-56 max-h-56">
             <figure className="w-56 h-56">
@@ -86,6 +118,34 @@ export default function CardAnggota() {
             </div>
           </div>
         ))}
+      </div>
+
+      <div className="sm:hidden flex justify-center items-center no-scrollbar-x">
+        <div className="w-full max-w-3xl">
+          <Slider {...settings}>
+            {dataAnggota.map((data, index) => (
+              <div
+                key={index}
+                className="card-container flex flex-col justify-center mx-auto"
+              >
+                <figure className="w-56 h-56 mx-auto">
+                  <img
+                    src={data.img}
+                    alt="Foto profile"
+                    className="rounded-sm aspect-square object-cover cursor-pointer"
+                    onClick={() => handleImageClick(data)}
+                  />
+                </figure>
+                <div className="flex flex-col justify-between mt-2 w-56 text-center mx-auto">
+                  <p className="font-semibold break-words">{data.nama}</p>
+                  <p className="break-words text-[#FF9100] font-semibold">
+                    {data.jabatan}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </Slider>
+        </div>
       </div>
       {selectedMember && <DetailAnggota member={selectedMember} />}
     </>

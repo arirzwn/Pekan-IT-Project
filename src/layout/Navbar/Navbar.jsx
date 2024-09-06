@@ -46,13 +46,19 @@ export default function Navbar() {
           </Button>
         </div>
       </div>
-      {menuOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-end">
-          <div className="navbar-menu bg-base-100 w-3/4  max-sm:w-3/4 p-4 max-sm:max-h-screen overflow-y-auto">
-            <Navlink vertical />
-          </div>
+      <div
+        className={`fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-end transition-opacity duration-300 ${
+          menuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+        }`}
+      >
+        <div
+          className={`navbar-menu bg-base-100 w-3/4 max-sm:w-3/4 p-4 max-sm:max-h-screen overflow-y-auto transition-transform duration-300 transform ${
+            menuOpen ? "translate-x-0" : "translate-x-full"
+          }`}
+        >
+          <Navlink vertical onClose={() => setMenuOpen(false)} />
         </div>
-      )}
+      </div>
     </div>
   );
 }

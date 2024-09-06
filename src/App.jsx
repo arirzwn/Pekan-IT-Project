@@ -38,7 +38,7 @@ function App() {
           </Routes>
         </CSSTransition>
       </TransitionGroup>
-      <Footer />
+      {/*<Footer />*/}
     </>
   );
 }

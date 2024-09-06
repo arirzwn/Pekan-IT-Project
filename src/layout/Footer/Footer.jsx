@@ -125,21 +125,21 @@ export default function Footer() {
       </div>
 
       {/* Untuk tampilan mobile / max-sm */}
-      <footer className="block xl:hidden">
-        <div className="relative  ">
-          <img src={bgFooter} alt="Background" className=" object-cover" />
+      <footer className="block xl:hidden relative bottom-0 w-full">
+        <div className="relative max-sm:h-40">
+          <img src={bgFooter} alt="Background" className="object-cover" />
           <div className="bg-[#365E32] bg-opacity-65 absolute inset-0 flex justify-center items-center">
             <div className="text-center">
-              <h3 className="uppercase text-2xl font-semibold text-white mb-5 flex items-center justify-center gap-3">
+              <h3 className="uppercase text-2xl font-semibold text-white flex items-center justify-center gap-3 max-sm:text-sm">
                 <a href="#"> Take Action </a>
                 <IoArrowForwardCircleOutline className="text-3xl" />
               </h3>
-              <h3 className="uppercase text-2xl font-semibold text-white flex items-center justify-center gap-3">
+              <h3 className="uppercase text-2xl font-semibold text-white flex items-center justify-center gap-3 max-sm:text-sm">
                 <a href="#"> Partner With Us</a>
                 <IoArrowForwardCircleOutline className="text-3xl" />
               </h3>
               <Button
-                className="mt-4 border-none text-white px-7"
+                className="mt-4 border-none text-white rounded-full h-[50px]"
                 onClick={() => navigate("/donation")}
               >
                 DONASI
@@ -148,9 +148,9 @@ export default function Footer() {
           </div>
         </div>
         <div className="container bg-[#DEF9C4] px-5 py-3 text-[#365E32] relative">
-          <div className="flex justify-center gap-5 ">
+          <div className="flex justify-center gap-5">
             <div className="kiri border-r-2 border-[#365E32] pr-10">
-              <div className="flex items-center mb-2 ">
+              <div className="flex items-center mb-2">
                 <div>
                   <h1 className="font-semibold text-sm mr-2">TENTANG</h1>
                 </div>
@@ -166,24 +166,24 @@ export default function Footer() {
                 <li className="">Events</li>
               </ul>
               <div className="flex gap-4 mt-4">
-                <div className="h-3 w-3 p-4 border-[3px] border-[#365E32] rounded-full flex justify-center items-center">
+                <div className="h-1 w-1 p-4 border-[2px] border-[#365E32] rounded-full flex justify-center items-center">
                   <a href="#">
-                    <FaFacebookF className="text-xl" />
+                    <FaFacebookF className="text-lg" />
                   </a>
                 </div>
-                <div className="h-3 w-3 p-4 border-[3px] border-[#365E32] rounded-full flex justify-center items-center">
+                <div className="h-1 w-1 p-4 border-[2px] border-[#365E32] rounded-full flex justify-center items-center">
                   <a href="#">
-                    <FaLinkedinIn className="text-xl" />
+                    <FaLinkedinIn className="text-lg" />
                   </a>
                 </div>
-                <div className="h-3 w-3 p-4 border-[3px] border-[#365E32] rounded-full flex justify-center items-center">
+                <div className="h-1 w-1 p-4 border-[2px] border-[#365E32] rounded-full flex justify-center items-center">
                   <a href="#">
-                    <FaInstagram className="text-xl" />
+                    <FaInstagram className="text-lg" />
                   </a>
                 </div>
-                <div className="h-3 w-3 p-4 border-[3px] border-[#365E32] rounded-full flex justify-center items-center">
+                <div className="h-1 w-1 p-4 border-[2px] border-[#365E32] rounded-full flex justify-center items-center">
                   <a href="#">
-                    <FaGithub className="text-xl" />
+                    <FaGithub className="text-lg" />
                   </a>
                 </div>
               </div>
@@ -198,9 +198,9 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className=" bg-[#365E32] py-2 flex justify-center items-center">
+        <div className="bg-[#365E32] py-4 flex justify-center items-center">
           <a href="#" className="flex gap-2 items-center justify-center">
-            <p className="text-white footer ">
+            <p className="text-white footer text-xs">
               Copyright © {new Date().getFullYear()} - All right reserved by
             </p>
             <figure>
