@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 import { Typewriter } from "react-simple-typewriter";
-import banner from "../assets/Banner.png";
+import banner from "../assets/Banner.jpeg";
 
 export default function TeksHijaukan() {
   const [startTyping, setStartTyping] = useState(false);
@@ -32,7 +32,7 @@ export default function TeksHijaukan() {
 
   return (
     <div className="mt-16" ref={elementRef}>
-      <figure className="relative w-full h-full flex items-center justify-center">
+      <figure className="relative w-full h-[400px] flex items-center justify-center">
         <img src={banner} alt="Gambar Banner" className="w-full h-full" />
         <span className="absolute text-4xl font-light text-white">
           {startTyping && (
